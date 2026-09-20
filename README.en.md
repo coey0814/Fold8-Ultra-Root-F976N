@@ -52,17 +52,19 @@ and picks the matching payload. You can also select the target manually from the
 
 - Samsung Galaxy Z Fold 8 Ultra **SM-F976N (q8q)** on one of the firmwares above.
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** installed and running (wireless debugging / adb mode is enough).
-- The **KernelSU manager** app installed (to use the root once the module is late-loaded).
+- The **[KernelSU manager](https://github.com/tiann/KernelSU/releases)** app — **not bundled with this app, install it
+  separately** (tested with v3.3.0). Required to use the root once the module is late-loaded.
 - This app does **not** flash or modify any partition; it loads the KernelSU module at runtime,
   so root must be re-applied after each reboot (or use the built-in auto-root).
 
 ## Usage
 
-1. Install the APK from [Releases](../../releases/latest).
-2. Start **Shizuku** (wireless debugging pairing), then open this app.
-3. Tap **GRANT PERMISSION** and approve the Shizuku dialog. The ring goes `READY`.
-4. Tap **RUN EXPLOIT**. The log shows the run; on success the ring shows `LIVE` (KernelSU active).
-5. Open the **KernelSU manager** to grant root to your apps.
+1. First, install the **[KernelSU manager](https://github.com/tiann/KernelSU/releases)** app (it is **not** bundled with this app).
+2. Install the APK from [Releases](../../releases/latest).
+3. Start **Shizuku** (wireless debugging pairing), then open this app.
+4. Tap **GRANT PERMISSION** and approve the Shizuku dialog. The ring goes `READY`.
+5. Tap **RUN EXPLOIT**. The log shows the run; on success the ring shows `LIVE` (KernelSU active).
+6. Open the **KernelSU manager** to grant root to your apps.
 
 ### Auto-root on boot
 
