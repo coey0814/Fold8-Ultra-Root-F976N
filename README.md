@@ -18,7 +18,7 @@
 </p>
 
 > ## ⚠️ 경고
-> **I am not responsible for bricked phones. — 벽돌된 폰에 대해 책임지지 않습니다.**
+> **벽돌된 폰에 대해 책임지지 않습니다.**
 > - 이 도구는 파티션을 플래시하지 않는 **임시 루트(late-load)** 방식이라 KNOX 워런티 비트를 트립하지 않습니다.
 > - 다만 펌웨어가 맞지 않거나 실행이 잘못되면 **부팅 불가(벽돌)** 가 될 수 있습니다.
 >   **반드시 본인 소유 기기**에서만, 아래 지원 펌웨어에서만 실행하세요.
@@ -73,6 +73,15 @@
 - 이 ROM에서 무권한 앱은 `/proc/modules` 를 읽을 수 없어, KernelSU 감지는 Shizuku 경유
   (또는 KernelSU에서 이 앱에 루트를 부여한 경우 `su`) 로 동작합니다. Shizuku가 없으면 `LIVE` 판정이 불가합니다.
 - 한 번에 하나만 실행하세요(전역 실행 락).
+
+## 추가 정보
+
+- **안정성**: S25 계열 임시루트보다 성공률이 높은 편입니다. 보통 1~3회 안에 성공합니다.
+  가끔 루트 몇 분 뒤에 재부팅되는 경우가 있는데, 그때 다시 실행하면 됩니다.
+- **LSPosed 사용 시**: 아래 조합을 권장합니다.
+  - [NeoZygisk-PostBoot](https://github.com/igorcv88/NeoZygisk-PostBoot) 2.3+
+  - [LSPosed](http://lsposed.zip/) 2.2.0
+- **금융/주식 앱 루트 숨기기**: [HMA-OSS](https://github.com/frknkrc44/HMA-OSS/releases) 권장.
 
 ## 빌드
 
