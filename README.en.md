@@ -76,6 +76,15 @@ and re-applies root once per boot. It checks whether KernelSU is already loaded 
   (or via `su` if this app has been granted root in KernelSU). Without Shizuku, the app cannot report `LIVE`.
 - Run only one at a time — the runner holds a global lock.
 
+## Additional info
+
+- **Stability**: generally more reliable than the S25-series temporary root; usually succeeds within 1–3 tries.
+  If the device reboots a few minutes after rooting, just run it again.
+- **LSPosed**: use this combination:
+  - [NeoZygisk-PostBoot](https://github.com/igorcv88/NeoZygisk-PostBoot) 2.3+
+  - [LSPosed](http://lsposed.zip/) 2.2.0
+- **Hiding root from banking / stock apps**: [HMA-OSS](https://github.com/frknkrc44/HMA-OSS/releases).
+
 ## Build
 
 Requirements: **JDK 17** and **Android SDK 34** (no NDK needed; the payloads are prebuilt assets).
