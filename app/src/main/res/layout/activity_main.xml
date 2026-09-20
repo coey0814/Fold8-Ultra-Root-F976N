@@ -1,0 +1,576 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gl_bg"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Brand header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="12dp">
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:background="@drawable/bg_chip"
+            android:contentDescription="@string/brand_title"
+            android:padding="9dp"
+            android:src="@drawable/ic_shield"
+            app:tint="@color/gl_accent" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_title"
+                android:textColor="@color/gl_on_surface"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brand_subtitle"
+                android:textColor="@color/gl_on_surface_variant"
+                android:textSize="11sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Hero status -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/GlCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp">
+
+            <FrameLayout
+                android:layout_width="104dp"
+                android:layout_height="104dp">
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/statusRing"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    android:progress="0"
+                    app:indicatorColor="@color/gl_accent"
+                    app:indicatorSize="96dp"
+                    app:trackColor="@color/gl_outline"
+                    app:trackThickness="6dp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/brand_title"
+                    android:src="@drawable/ic_shield"
+                    app:tint="@color/gl_on_surface" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/heroState"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:letterSpacing="0.06"
+                    android:text="@string/hero_state_offline"
+                    android:textColor="@color/gl_on_surface"
+                    android:textSize="23sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/heroCaption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/hero_caption_idle"
+                    android:textColor="@color/gl_on_surface_variant"
+                    android:textSize="11sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/GlSectionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stat_target" />
+
+                        <TextView
+                            android:id="@+id/heroTarget"
+                            style="@style/GlValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            tools:text="AZI5" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/GlSectionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stat_shizuku" />
+
+                        <TextView
+                            android:id="@+id/heroShizuku"
+                            style="@style/GlValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            tools:text="OFF" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/GlSectionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/stat_kernelsu" />
+
+                        <TextView
+                            android:id="@+id/heroKsu"
+                            style="@style/GlValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            tools:text="—" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Target selector -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/targetCard"
+        style="@style/GlCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:clickable="true"
+        android:focusable="false"
+        app:rippleColor="@color/gl_ripple">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/GlSectionTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/section_target" />
+
+                <TextView
+                    android:id="@+id/targetValue"
+                    style="@style/GlValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    tools:text="자동 감지 / Auto (detected)" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/section_target"
+                android:src="@drawable/ic_chevron"
+                app:tint="@color/gl_on_surface_variant" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Control (step 1 + step 2) -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/GlCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:contentDescription="@string/section_step1"
+                            android:src="@drawable/ic_key"
+                            app:tint="@color/gl_accent" />
+
+                        <TextView
+                            style="@style/GlSectionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/section_step1" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/statusView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:text="@string/status_shizuku_off"
+                        android:textColor="@color/gl_on_surface_variant"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/grantButton"
+                    style="@style/GlButton.Compact.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/btn_grant_short"
+                    app:icon="@drawable/ic_key"
+                    app:iconGravity="textStart"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/gl_btn_icon" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:background="@color/gl_outline" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="14dp"
+                            android:layout_height="14dp"
+                            android:contentDescription="@string/section_step2"
+                            android:src="@drawable/ic_terminal"
+                            app:tint="@color/gl_accent" />
+
+                        <TextView
+                            style="@style/GlSectionTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="@string/section_step2" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/step2_caption"
+                        android:textColor="@color/gl_on_surface_variant"
+                        android:textSize="11sp" />
+                </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/stopButton"
+                    style="@style/GlButton.Compact.Outlined"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:enabled="false"
+                    android:text="@string/btn_stop_short"
+                    app:icon="@drawable/ic_power"
+                    app:iconGravity="textStart"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/gl_btn_danger_icon" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/runButton"
+                    style="@style/GlButton.Compact"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/btn_run_short"
+                    android:textColor="@color/gl_btn_on_accent"
+                    app:backgroundTint="@color/gl_btn_accent_bg"
+                    app:icon="@drawable/ic_play"
+                    app:iconGravity="textStart"
+                    app:iconSize="16dp"
+                    app:iconTint="@color/gl_btn_on_accent" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Auto-root toggle -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/GlCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/autoroot_title"
+                    android:textColor="@color/gl_on_surface"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/autoroot_desc"
+                    android:textColor="@color/gl_on_surface_variant"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <com.google.android.material.materialswitch.MaterialSwitch
+                android:id="@+id/autoSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Log (fills remaining space) -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/GlCard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="4dp"
+                android:paddingBottom="4dp">
+
+                <TextView
+                    style="@style/GlSectionTitle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/section_log" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/copyLogButton"
+                    style="@style/GlIconButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/log_copy"
+                    app:icon="@drawable/ic_copy" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/shareLogButton"
+                    style="@style/GlIconButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/log_share"
+                    app:icon="@drawable/ic_share" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/clearLogButton"
+                    style="@style/GlIconButton"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:contentDescription="@string/log_clear"
+                    app:icon="@drawable/ic_trash" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/gl_outline" />
+
+            <ScrollView
+                android:id="@+id/logScroll"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/gl_log_bg"
+                android:nestedScrollingEnabled="false"
+                android:padding="12dp"
+                android:scrollbars="vertical">
+
+                <TextView
+                    android:id="@+id/logView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:lineSpacingExtra="2dp"
+                    android:textColor="@color/gl_on_surface"
+                    android:textIsSelectable="true"
+                    android:textSize="10sp"
+                    tools:text="[*] GhostLock ready" />
+            </ScrollView>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Bottom action bar -->
+    <com.google.android.material.card.MaterialCardView
+        style="@style/GlCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navRefresh"
+                style="@style/GlIconButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/nav_refresh"
+                app:icon="@drawable/ic_refresh" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navRun"
+                style="@style/GlIconButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/nav_run"
+                app:icon="@drawable/ic_play"
+                app:iconTint="@color/gl_accent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navCopy"
+                style="@style/GlIconButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/nav_copy"
+                app:icon="@drawable/ic_copy" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navShare"
+                style="@style/GlIconButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:contentDescription="@string/nav_share"
+                app:icon="@drawable/ic_share" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

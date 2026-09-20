@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fold 8 Ultra GhostLock</string>
+
+    <string name="brand_title">GhostLock</string>
+    <string name="brand_subtitle">Fold 8 Ultra · F976N · q8q</string>
+
+    <string name="hero_state_setup">SETUP</string>
+    <string name="hero_state_offline">SETUP</string>
+    <string name="hero_state_ready">READY</string>
+    <string name="hero_state_running">RUNNING</string>
+    <string name="hero_state_rooted">LIVE</string>
+    <string name="hero_caption_idle">루트 없음 / Not rooted</string>
+    <string name="hero_caption_setup">Shizuku 시작 필요 / start Shizuku</string>
+    <string name="hero_caption_rooted">KernelSU 작동 중 / active</string>
+    <string name="hero_caption_running">작업 중 / Working…</string>
+
+    <string name="stat_target">대상 / TARGET</string>
+    <string name="stat_shizuku">SHIZUKU</string>
+    <string name="stat_kernelsu">KERNELSU</string>
+
+    <string name="section_target">대상 펌웨어 / TARGET FIRMWARE</string>
+    <string name="section_step1">STEP 1 · SHIZUKU 연결</string>
+    <string name="section_step2">STEP 2 · 루트 실행</string>
+    <string name="section_autoroot">부팅 자동 루팅 / AUTO-ROOT</string>
+    <string name="section_log">실행 로그 / RUN LOG</string>
+
+    <string name="target_auto">자동 감지 / Auto (detected)</string>
+    <string name="dialog_target_title">대상 펌웨어 선택 / SELECT TARGET</string>
+
+    <string name="btn_grant">Shizuku 권한 요청 / GRANT PERMISSION</string>
+    <string name="btn_run">루트 실행 / RUN EXPLOIT</string>
+    <string name="btn_stop">중지 / STOP</string>
+    <string name="btn_grant_short">권한 / GRANT</string>
+    <string name="btn_run_short">루트 실행 / RUN</string>
+    <string name="btn_stop_short">중지 / STOP</string>
+    <string name="step2_caption">KernelSU 자동 설치 / auto-install</string>
+    <string name="step1_caption">Shizuku 연결 상태 / connection</string>
+
+    <string name="autoroot_title">부팅 시 자동 루팅 / Auto-root on boot</string>
+    <string name="autoroot_desc">재부팅 후 루트를 자동 복원 / Re-apply automatically</string>
+
+    <string name="log_copy">복사 / Copy</string>
+    <string name="log_clear">지우기 / Clear</string>
+    <string name="log_share">공유 / Share</string>
+
+    <string name="nav_home">홈 / Home</string>
+    <string name="nav_run">실행 / Run</string>
+    <string name="nav_logs">로그 / Logs</string>
+    <string name="nav_copy">복사 / Copy</string>
+    <string name="nav_refresh">새로고침 / Refresh</string>
+    <string name="nav_share">공유 / Share</string>
+
+    <string name="status_rooted">KernelSU 작동 중 — 추가 루팅 불필요\nKernelSU active (no further rooting needed)</string>
+    <string name="status_shizuku_off">Shizuku 미실행 — 먼저 Shizuku를 시작하세요\nShizuku NOT running (wireless-debugging pairing)</string>
+    <string name="status_shizuku_noperm">Shizuku 실행 중, 권한 없음 — 권한을 요청하세요\nRunning, permission NOT granted</string>
+    <string name="status_shizuku_ready">Shizuku 준비됨 (권한 허용됨)\nReady — permission granted</string>
+
+    <string name="rerun_title">이미 루팅됨 / Already rooted</string>
+    <string name="rerun_message">KernelSU가 이미 작동 중입니다. 그래도 다시 실행할까요?\nKernelSU is already active. Re-run anyway?</string>
+    <string name="rerun_confirm">다시 실행 / RE-RUN</string>
+
+    <string name="on">ON</string>
+    <string name="off">OFF</string>
+    <string name="none">—</string>
+</resources>

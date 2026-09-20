@@ -1,0 +1,44 @@
+Fold8-Ultra-Root-F976N
+Copyright 2026 the project authors
+
+This product includes software developed by third parties.
+
+--------------------------------------------------------------------------
+GhostLock (application UI and logic)
+  https://github.com/YuKongA/ghostlock-app
+  Copyright YuKongA and contributors
+  Licensed under the Apache License, Version 2.0.
+  The application in this repository is based on GhostLock.
+
+GhostLock for Galaxy Z Fold 8 Ultra / q8q (exploit payload)
+  https://github.com/diabl0w/ghostlock-q8q
+  Copyright diabl0w and contributors
+  The bundled preload*.so exploit payloads originate from this project.
+
+CyberMeowfia (original CVE-2026-43499 research)
+  https://github.com/NebuSec/CyberMeowfia
+  https://github.com/polygraphene/CyberMeowfia
+  Licensed under the Apache License, Version 2.0.
+
+KernelSU
+  https://github.com/tiann/KernelSU
+  Copyright KernelSU contributors
+  Licensed under the GNU General Public License v3.0.
+  The bundled ksud binaries and KernelSU kernel module are separate works
+  distributed under GPL-3.0. Corresponding source is available at the links
+  above; the q8q build tree is https://github.com/polygraphene/KernelSU
+
+Shizuku
+  https://github.com/RikkaApps/Shizuku
+  Copyright RikkaApps
+  Licensed under the Apache License, Version 2.0.
+
+Root My Galaxy (reference for project structure / release automation)
+  https://github.com/BuSung-dev/Root-My-Galaxy
+  Licensed under the Apache License, Version 2.0.
+
+UniRoot (reference for the auto-root on boot feature)
+  https://github.com/kuuky29/UniRoot
+  Copyright kuuky and contributors
+  No license file is provided by the upstream project; used as a design
+  reference only.

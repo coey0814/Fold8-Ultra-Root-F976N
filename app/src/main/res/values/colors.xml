@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gl_bg">#080B0B</color>
+    <color name="gl_surface">#0F1514</color>
+    <color name="gl_surface_container">#151D1C</color>
+    <color name="gl_surface_high">#1C2725</color>
+    <color name="gl_outline">#24302E</color>
+    <color name="gl_on_surface">#E9F2F0</color>
+    <color name="gl_on_surface_variant">#7E8F8C</color>
+
+    <!-- Material "dark teal" family -->
+    <color name="gl_accent">#2DD4BF</color>
+    <color name="gl_accent_dim">#0E3B37</color>
+    <color name="gl_on_accent">#03201C</color>
+    <color name="gl_accent_soft">#7DE9DC</color>
+
+    <color name="gl_ripple">#332DD4BF</color>
+    <color name="gl_danger">#F0555B</color>
+    <color name="gl_success">#4ADE80</color>
+    <color name="gl_warning">#E8B84B</color>
+    <color name="gl_log_bg">#0A0F0E</color>
+
+    <color name="ic_launcher_bg">#07110F</color>
+</resources>
