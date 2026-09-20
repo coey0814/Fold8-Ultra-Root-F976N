@@ -9,46 +9,35 @@
 </p>
 
 <p align="center">
-  삼성 갤럭시 Z 폴드8 울트라(<b>SM-F976N</b>, 코드명 <b>q8q</b>)용 <b>원클릭 KernelSU</b> 설치 도구<br>
+  삼성 갤럭시 Z 폴드8 울트라(<b>SM-F976N</b>, 코드명 <b>q8q</b>)용 <b>원클릭 KernelSU</b> 설치 도구입니다.<br>
   <b>CVE-2026-43499</b> late-load 익스플로잇을 <b>Shizuku</b>로 실행합니다.
 </p>
 
 <p align="center">
-  <i>One-tap KernelSU installer for the Galaxy Z Fold 8 Ultra (SM-F976N / q8q)<br>
-  powered by the CVE-2026-43499 late-load exploit via Shizuku.</i>
+  <a href="../../releases/latest">최신 APK 다운로드</a>
 </p>
 
-<p align="center">
-  <a href="../../releases/latest">최신 APK 다운로드 / Download latest APK</a>
-</p>
-
-> ## ⚠️ 경고 / WARNING
+> ## ⚠️ 경고
 > **I am not responsible for bricked phones. — 벽돌된 폰에 대해 책임지지 않습니다.**
 > - 이 도구는 파티션을 플래시하지 않는 **임시 루트(late-load)** 방식이라 KNOX 워런티 비트를 트립하지 않습니다.
 > - 다만 펌웨어가 맞지 않거나 실행이 잘못되면 **부팅 불가(벽돌)** 가 될 수 있습니다.
 >   **반드시 본인 소유 기기**에서만, 아래 지원 펌웨어에서만 실행하세요.
 > - 루트가 활성화된 동안 일부 앱(금융·정부·DRM 등)은 루트를 감지해 실행을 거부할 수 있습니다(재부팅 시 해제).
 > - 무보증. 사용에 따른 모든 책임은 사용자에게 있습니다.
->
-> **I am not responsible for bricked phones.** This tool uses a temporary (late-load) root that does
-> not flash any partition, so it does **not** trip the KNOX warranty bit. However, a wrong firmware
-> match or a bad run can still cause a bootloop or hard brick. **Only run this on a device you own**,
-> and only on the firmware revisions below. While root is active, some apps (banking / government /
-> DRM) may detect root and refuse to run (resolved after a reboot). No warranty; use at your own risk.
 
 ---
 
-## 스크린샷 / Screenshot
+## 스크린샷
 
 <p align="center">
-  <img src="docs/screenshot.png" width="320" alt="Application screenshot">
+  <img src="docs/screenshot.png" width="320" alt="애플리케이션 스크린샷">
 </p>
 
 ---
 
-## 지원 펌웨어 / Supported firmware
+## 지원 펌웨어
 
-| 리비전 / Rev | PDA | 익스플로잇 / Payload | ksud |
+| 리비전 | PDA | 익스플로잇 페이로드 | ksud |
 |---|---|---|---|
 | rev1 | `F976NKSU1AZGI` | `preload.so` | `ksud` |
 | rev2 | `F976NKSS2AZH7` | `preload-azh7.so` | `ksud-azh7` |
@@ -57,10 +46,7 @@
 앱이 `Build.FINGERPRINT` / `Build.DISPLAY` / `Build.ID` 로 실행 중인 펌웨어를 자동 감지해 알맞은
 페이로드를 고릅니다. **TARGET FIRMWARE** 카드에서 수동 선택도 가능합니다.
 
-*The app auto-detects the running firmware and picks the matching payload.
-You can also select the target manually from the **TARGET FIRMWARE** card.*
-
-## 요구사항 / Requirements
+## 요구사항
 
 - 지원 펌웨어가 설치된 갤럭시 Z 폴드8 울트라 **SM-F976N (q8q)**
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** 설치 및 실행 (무선 디버깅 / adb 모드면 충분)
@@ -68,10 +54,7 @@ You can also select the target manually from the **TARGET FIRMWARE** card.*
 - 이 앱은 파티션을 플래시/수정하지 않고 런타임에 KernelSU 모듈을 로드합니다.
   따라서 재부팅 후 루트를 다시 적용해야 합니다(자동 루팅을 켜면 자동).
 
-*The app does not flash or modify any partition; it loads the KernelSU module at runtime,
-so root must be re-applied after each reboot (or use the built-in auto-root).*
-
-## 사용법 / Usage
+## 사용법
 
 1. [Releases](../../releases/latest) 에서 APK 설치
 2. **Shizuku** 실행(무선 디버깅 페어링) 후 이 앱 열기
@@ -79,32 +62,25 @@ so root must be re-applied after each reboot (or use the built-in auto-root).*
 4. **RUN EXPLOIT** 탭. 로그가 표시되고, 성공하면 링이 `LIVE`(KernelSU 작동 중) 로 바뀝니다.
 5. **KernelSU 매니저**를 열어 앱에 루트를 부여하세요.
 
-### 부팅 자동 루팅 / Auto-root on boot
+### 부팅 자동 루팅
 
 **Auto-root on boot** 를 켜면 재부팅 후 포그라운드 서비스가 Shizuku를 최대 5분 대기한 뒤
 부팅당 1회 루트를 다시 적용합니다. KernelSU가 이미 로드돼 있으면 **재실행하지 않고 건너뜁니다.**
 
-*When enabled, a foreground service waits up to 5 minutes for Shizuku and re-applies root once per
-boot. It checks whether KernelSU is already loaded and skips if so.*
-
-### 참고 및 제한 / Notes and limitations
+### 참고 및 제한
 
 - 시도당 최대 3회 재시도(60초 간격), 시도당 logcat 감시 60초, 재부팅 감지 시 중단됩니다.
 - 이 ROM에서 무권한 앱은 `/proc/modules` 를 읽을 수 없어, KernelSU 감지는 Shizuku 경유
   (또는 KernelSU에서 이 앱에 루트를 부여한 경우 `su`) 로 동작합니다. Shizuku가 없으면 `LIVE` 판정이 불가합니다.
 - 한 번에 하나만 실행하세요(전역 실행 락).
-- On this ROM an unprivileged app cannot read `/proc/modules`, so KernelSU is detected through
-  Shizuku (or via `su` if granted root in KernelSU). Without Shizuku the app cannot report `LIVE`.
 
-## 빌드 / Build
+## 빌드
 
 요구사항: **JDK 17**, **Android SDK 34** (NDK 불필요 — 페이로드는 미리 빌드된 asset 입니다).
 
-*Requirements: JDK 17 and Android SDK 34 (no NDK needed; the payloads are prebuilt assets).*
-
 ```sh
 JAVA_HOME=/path/to/jdk-17 ./gradlew :app:assembleRelease
-# 출력 / output: app/build/outputs/apk/release/app-release.apk
+# 출력: app/build/outputs/apk/release/app-release.apk
 ```
 
 `local.properties` 와 서명 키는 의도적으로 **커밋하지 않습니다.** 릴리즈 빌드를 하려면 `sdk.dir` 을
@@ -112,12 +88,9 @@ JAVA_HOME=/path/to/jdk-17 ./gradlew :app:assembleRelease
 배포된 APK는 AOSP **testkey**(`alias testkey`, 비밀번호 `android`) 로 서명되어, 기존 testkey 서명
 빌드 위에 그대로 덮어쓰기 설치됩니다.
 
-*`local.properties` and the signing keystore are intentionally not committed. The published APK is
-signed with the AOSP testkey (`alias testkey`, password `android`), so updates install in place.*
+### 번들 자산 무결성 (SHA-256)
 
-### 번들 자산 무결성 / Bundled asset integrity (SHA-256)
-
-| 자산 / Asset | SHA-256 (앞자리 / prefix) |
+| 자산 | SHA-256 (앞자리) |
 |---|---|
 | `preload.so` | `947099db3862efcc…` |
 | `preload-azh7.so` | `0408d45a1ba33701…` |
@@ -126,7 +99,7 @@ signed with the AOSP testkey (`alias testkey`, password `android`), so updates i
 | `ksud-azh7` | `b140d354cffed359…` |
 | `ksud-azi5` | `784e4ea7ddee2f8c…` |
 
-## 크레딧 / Credits
+## 크레딧
 
 이 프로젝트는 다음 오픈소스 없이는 존재할 수 없습니다.
 
@@ -140,7 +113,7 @@ signed with the AOSP testkey (`alias testkey`, password `android`), so updates i
 
 자세한 내용은 [NOTICE](NOTICE) 참고.
 
-## 라이선스 / License
+## 라이선스
 
 **Apache License 2.0** 으로 배포됩니다. [LICENSE](LICENSE) 참고.
 
