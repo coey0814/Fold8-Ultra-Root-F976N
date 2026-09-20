@@ -18,7 +18,7 @@
 </p>
 
 > ## ⚠️ 경고
-> **벽돌된 폰에 대해 책임지지 않습니다.**
+> **I am not responsible for bricked phones. — 벽돌된 폰에 대해 책임지지 않습니다.**
 > - 이 도구는 파티션을 플래시하지 않는 **임시 루트(late-load)** 방식이라 KNOX 워런티 비트를 트립하지 않습니다.
 > - 다만 펌웨어가 맞지 않거나 실행이 잘못되면 **부팅 불가(벽돌)** 가 될 수 있습니다.
 >   **반드시 본인 소유 기기**에서만, 아래 지원 펌웨어에서만 실행하세요.
@@ -50,17 +50,19 @@
 
 - 지원 펌웨어가 설치된 갤럭시 Z 폴드8 울트라 **SM-F976N (q8q)**
 - **[Shizuku](https://github.com/RikkaApps/Shizuku)** 설치 및 실행 (무선 디버깅 / adb 모드면 충분)
-- 루트 사용을 위한 **KernelSU 매니저** 앱
+- **[KernelSU 매니저](https://github.com/tiann/KernelSU/releases) 앱** — 이 앱에 **포함되어 있지 않으므로 별도로 설치**해야 합니다
+  (테스트 환경: v3.3.0). 모듈 로드 후 루트를 사용하려면 필요합니다.
 - 이 앱은 파티션을 플래시/수정하지 않고 런타임에 KernelSU 모듈을 로드합니다.
   따라서 재부팅 후 루트를 다시 적용해야 합니다(자동 루팅을 켜면 자동).
 
 ## 사용법
 
-1. [Releases](../../releases/latest) 에서 APK 설치
-2. **Shizuku** 실행(무선 디버깅 페어링) 후 이 앱 열기
-3. **GRANT PERMISSION** 탭 → Shizuku 권한 승인. 링이 `READY` 로 바뀝니다.
-4. **RUN EXPLOIT** 탭. 로그가 표시되고, 성공하면 링이 `LIVE`(KernelSU 작동 중) 로 바뀝니다.
-5. **KernelSU 매니저**를 열어 앱에 루트를 부여하세요.
+1. **[KernelSU 매니저](https://github.com/tiann/KernelSU/releases)** 앱을 먼저 설치합니다 (이 앱에는 포함되어 있지 않습니다).
+2. [Releases](../../releases/latest) 에서 이 앱의 APK 설치
+3. **Shizuku** 실행(무선 디버깅 페어링) 후 이 앱 열기
+4. **GRANT PERMISSION** 탭 → Shizuku 권한 승인. 링이 `READY` 로 바뀝니다.
+5. **RUN EXPLOIT** 탭. 로그가 표시되고, 성공하면 링이 `LIVE`(KernelSU 작동 중) 로 바뀝니다.
+6. **KernelSU 매니저**를 열어 앱에 루트를 부여하세요.
 
 ### 부팅 자동 루팅
 
